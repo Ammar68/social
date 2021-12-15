@@ -8,6 +8,6 @@ class Index(GenericAPIView):
     queryset = Post.objects.all()
     serializer_class = IndexSerializer
     
-  def post(self, request):
-    return Response({"Posts" : self.queryset.values()})
+    def post(self, request):
+      return Response({"Posts" : self.queryset.values()})
   
