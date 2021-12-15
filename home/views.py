@@ -1,9 +1,9 @@
 from django.shortcuts import render
-from rest_framework.generics import ListCreateAPIView
+from rest_framework.generics import GenericAPIView
 from .models import Post
 from .serializers import *
 
-class Index(ListCreateAPIView):
+class Index(GenericAPIView):
     queryset = Post.objects.all()
     serializer_class = IndexSerializer
-    
+  
